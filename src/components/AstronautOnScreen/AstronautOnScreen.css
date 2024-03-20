@@ -1,0 +1,15 @@
+.screen{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+}
+.screen img{
+    position:relative;
+    transform:translate(var(--x,0), var(--y,0)) rotate(var(--rotation));
+    transition: transform  var(--time,0);
+    width:140px;
+    height:auto;
+    z-index:1000;
+}

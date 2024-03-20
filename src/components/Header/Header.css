@@ -1,0 +1,117 @@
+.main-header{
+    display:flex;
+    padding:10px 20px;
+    color:#fff;
+    justify-content: space-between;
+    align-items:center;
+    position:absolute;
+    width:100%;
+    box-sizing: border-box;
+    z-index:100;
+}
+
+.main-header .logo{
+    height:50px;
+    width:auto;
+}
+
+.main-header ul{
+    padding:0;
+    margin:0;
+    display:flex;
+}
+li{
+    display:block;
+    margin-left:30px;
+}
+
+.main-header a{
+    color:#fff;
+    text-decoration:none;
+}
+
+.main-header .mobile{
+    display:none;
+}
+
+.mobileMenuTriggerer{
+    display:none;
+}
+
+
+@media screen and (max-width:768px){
+    .main-header{
+      position:relative;
+      z-index:1000;
+    }
+    .mobileMenuTriggerer{
+        width:30px;
+        height:30px;
+        object-fit:contain;
+        display:inline-block;
+        cursor:pointer;
+    }
+    .main-header .mobile{
+        display:block;
+    }
+    .menu_container{
+        position:fixed;
+        left:0;
+        width:100%;
+        height:100vh;
+        top:0;
+        background:#00000090;
+    }
+    .menu_container ul{
+        flex-direction:column;
+        height:100%;
+        width:50vw;
+        min-width:90vw;
+        background:#242424;
+        position:absolute;
+        right:0;
+    }
+    .menu_container ul a{
+        display:inline-block;
+        padding:10px 0;
+    }
+    .close_container{
+        text-align:right;
+        font-size:30px;
+        padding-right:10px;
+    }
+    .close_container span{
+        cursor:pointer;
+    }
+    .menu_container[data-collapse="false"]{
+        display:none;
+    }
+    .menu_container[data-collapse="true"]{
+        display:block;
+        z-index:100;
+    }
+    .menu_container[data-collapse="true"] ul{
+        animation-name:showMenu;
+        animation-duration:500ms;
+        animation-delay:100ms;
+        animation-fill-mode: both;
+    }
+    .menu_container[data-collapse="false"] ul{
+        animation-name:hideMenu;
+        animation-duration:500ms;
+        animation-delay:100ms;
+        animation-fill-mode: both;
+    }
+  }
+
+
+  @keyframes showMenu{
+    0%{right:-100vw}
+    100%{right:0}
+  }
+
+  @keyframes hideMenu{
+    0%{right:0}
+    100%{right:-100vw}
+  }
+  

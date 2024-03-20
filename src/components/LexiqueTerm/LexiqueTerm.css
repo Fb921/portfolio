@@ -1,0 +1,11 @@
+.lexiqueTerm_container{
+    margin-bottom:50px;
+}
+.lexiqueTerm_container .term_title{
+    font-weight:bold;
+    font-size:17px;
+    margin-bottom:7px;
+}
+.lexiqueTerm_container .term_def{
+    color:#ffffff90;
+}

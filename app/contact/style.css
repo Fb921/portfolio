@@ -1,0 +1,56 @@
+
+main section{
+    padding-top:120px;
+    min-height:100vh;
+}
+
+main section .info_bloc{
+    margin-bottom:30px;
+}
+main section .info_title{
+    color:#fff;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+main section .info_title + div{
+    font-size:20px;
+}
+
+main section .flex_container{
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+main section .flex_container > div:nth-child(2){
+    padding-left:30px;
+}
+
+main section form{
+    padding:20px;
+    background:#242424;
+    border-radius:20px;
+}
+main section form > div{
+    margin-bottom:30px;
+}
+main section form label{
+    display:block;
+    font-size:19px;
+    margin-bottom:5px;
+    color:#fff;
+}
+main section form input{
+    height:35px;
+    width:100%;
+    border-radius:5px;
+    border:0;
+    padding:0 10px;
+}
+main section form textarea{
+    height:105px;
+    width:100%;
+    border-radius:5px;
+    border:0;
+    padding:10px;
+}
+

@@ -1,0 +1,20 @@
+footer{
+    position:relative;
+    text-align:center;
+}
+
+footer a{
+    color:#fff;
+    text-decoration:none;
+    display:inline-block;
+    margin:0 10px;
+}
+
+.copyright_img{
+    height:14px;
+    width:14px;
+    object-fit:contain;
+    object-position:center;
+    margin:0 2px;
+    vertical-align: middle;
+}

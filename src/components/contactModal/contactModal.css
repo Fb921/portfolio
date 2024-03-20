@@ -1,0 +1,231 @@
+
+.contactModal + section,.contactModal + section + section, .contactModal + section + section + section{
+    /* filter:blur(6px); */
+    transition:filter 500ms;
+}
+.contactModal[data-modal-state="true"] + section,.contactModal + section + section, .contactModal + section + section + section{
+    /* filter:blur(6px); */
+    transition:filter 500ms;
+}
+.contactModal[data-modal-state="true"] ~ section{
+    filter:blur(6px);
+    transition:filter 500ms;
+}
+.contactModal .form_container[data-display-form="false"]{
+    display:none;
+    /* display:flex; */
+}
+.contactModal .form_container[data-display-form="true"]{
+    display:flex;
+}
+.form_container{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    background:#00000080;
+    justify-content:center;
+    align-items:center;
+}
+.form_container form{
+    background:#fff;
+    padding:20px;
+    border-radius:30px;
+    box-sizing: border-box;
+    max-height: 80vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.form_container form::-webkit-scrollbar{
+    width:5px;
+}
+.form_container form::-webkit-scrollbar-thumb{
+    background:#b22045;
+    border-radius:20px;
+}
+.sendMsg_btn{
+    background:#b22045;
+    color:#fff !important;
+    text-align:center;
+    padding:7px;
+    border-radius:5px;
+    font-weight:600;
+}
+.form_container form label{
+    display:block;
+}
+.form_container form input{
+    width:100%;
+    height:35px;
+    margin-bottom:19px;
+    border:1px #00000030 solid;
+}
+.form_container form textarea{
+    width:100%;
+    height:155px;
+    margin-bottom:19px;
+    border:1px #00000030 solid;
+}
+.form_container form *{
+    color:#000000;
+}
+.contactModal .modalContainer{
+    /* background:#00000080; */
+    background:#ffffff;
+    border-radius:30px;
+    padding:30px 20px;
+    box-sizing:border-box;
+    min-height:312px;
+    color:#000000;
+    position:fixed;
+    top:calc(50vh - 200px);
+    left:100px;
+    width:100vw;
+    max-width:400px;
+    transition:opacity 500ms;
+}
+.contactModal .modalContainer[data-modal-state="false"]{
+    display:none;
+    animation-name:disappearSlowly;
+    animation-duration:500ms;
+    animation-delay: 100ms;
+    animation-fill-mode: both;
+}
+.contactModal .modalContainer[data-modal-state="true"]{
+    display:block;
+    animation-name:appearSlowly;
+    animation-duration:500ms;
+    animation-delay: 100ms;
+    animation-fill-mode: both;
+}
+.contactModal[data-mobile="true"]{
+    display:none;
+}
+.contactModal[data-mobile="false"]{
+    display:block;
+}
+
+.contactModal[data-modal-state="false"]{
+    z-index:100;
+}
+.clickToTriggerModal_container[data-modal-state="false"]{
+    z-index:1;
+    background:transparent;
+    width:150px;
+}
+.contactModal[data-modal-state="true"]{
+    z-index:100;
+}
+.clickToTriggerModal_container[data-modal-state="true"]{
+    z-index:100;
+    background:#00000080;
+    width:100vw;
+}
+.contactModal .modalContainer .contactInformation_title{
+    margin-bottom:10px;
+}
+.contactModal .astronautImg{
+    position:fixed;
+    width:auto;
+    height:200px;
+    width:100px;
+    object-fit:contain;
+    top:calc(50vh - 100px);
+    left:-40px;
+    cursor:pointer;
+    transition:transform 500ms;
+}
+.contactModal .astronautImg[data-modal-state="true"]{
+    transform:rotate(25deg);
+}
+.contactModal .contactImg{
+    width:20px;
+    height:20px;
+    object-fit:contain;
+    object-position:center;
+    vertical-align:bottom;
+    margin-right:10px;
+}
+.contactModal .rocketImg{
+    position:absolute;
+    width:30%;
+    height:100px;
+    right:0;
+    bottom:0;
+    object-fit:contain;
+    object-position:right;
+}
+.contactModal .clickToTriggerModal_container{
+    position:fixed;
+    /* width:100vw; */
+    height:100vh;
+    z-index:100;
+    display:flex;
+    /* background:#00000080; */
+    justify-content:center;
+    align-items:center;
+}
+
+.contactModal button{
+    background:#b22045;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.informationContact span:not(.contactInfo_content){
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+}
+.informationContact .contactInfo_content{
+    padding-left:30px;
+    display:inline-block;
+}
+
+
+.informationContact{
+    margin-bottom:15px;
+}
+
+.contactModal .close_container{
+    text-align:right;
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    padding: 0 20px 10px 10px;
+}
+.contactModal .close_container span{
+    cursor:pointer;
+    font-size:40px;
+
+}
+
+.contactModal .contactInformation_title{
+    font-size:30px;
+}
+
+@media screen and (max-width:768px){
+    .contactModal .clickToTriggerModal_container{
+        top:0;
+        width:100%;
+    }
+    .contactModal .modalContainer{
+        width:100%;
+        height:100vh;
+    }
+}
+
+@keyframes appearSlowly{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+@keyframes disappearSlowly{
+    0%{opacity:1}
+    100%{opacity:0}
+}
+
