@@ -127,7 +127,7 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .content {
     padding: 4rem;
   }
@@ -200,6 +200,10 @@
       rgb(var(--background-end-rgb)) 40%
     );
     z-index: 1;
+  }
+
+  .smallLeftGalaxyMarker{
+    top:2vh;
   }
 }
 

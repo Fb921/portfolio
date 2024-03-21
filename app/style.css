@@ -4,6 +4,7 @@ section{
     max-width:75vw;
     margin:auto;
 }
+
 .section1{
     height:100vh;
     display:grid;
@@ -12,17 +13,18 @@ section{
     padding:0 20px;
     max-width:75vw;
     margin:auto;
-    overflow:hidden;
 }
+
 .section1 > div:nth-child(1){
     position:relative;
     z-index:2
 }
+
 h1{
-    /* font-size:50px; */
     font-size:7vh;
     margin:0 0 25px 0px;
 }
+
 h1 + div{
     font-size:23px;
     margin-bottom:5vh;
@@ -33,6 +35,7 @@ h1 + div{
     margin-top:5vh;
     color:#ffffff90;
 }
+
 .shortLogoPresentation{
     margin:20px 0;
 }
@@ -43,6 +46,7 @@ h1 + div{
     object-fit:contain;
     margin-right:30px;
 }
+
 .infos_icon{
     background-color:#ffffff90;
     width:20px;
@@ -55,10 +59,12 @@ h1 + div{
     border-radius:20px;
     margin-right:10px;
 }
+
 .earth_container{
     position:relative;
     height:100vh;
 }
+
 .earth_img{
     position:absolute;
     top:0;
@@ -67,6 +73,7 @@ h1 + div{
     object-position:left;
     z-index:1;
 }
+
 .section2{
     max-width:100vw;
     position:relative;
@@ -83,10 +90,12 @@ h1 + div{
     left:-14vw;
     top:-12.5vw;
 }
+
 .content_container{
     width:75vw;
     margin:auto;
 }
+
 .biggerTxt{
     font-size:35px;
     margin:30px 0 0 0;
@@ -95,17 +104,17 @@ h1 + div{
 h2{
     font-size:35px;
 }
-/* .quiSuisJe_title{
-    margin-top:10vh;
-} */
+
 .logo_container{
     display:flex;
     margin-top:2vh;
     z-index:5;
 }
+
 .logo_container > div:hover{
     z-index:5;
 }
+
 .logo_container.first{
     z-index:6;
 }
@@ -136,23 +145,25 @@ h2{
     margin-right:15px;
     margin-bottom:10px;
 }
+
 .tag:hover{
     background:#ffffff;
     transform:scale(1.1);
     cursor:pointer;
 }
+
 .tags_container{
     max-width:800px;
 }
+
 .section2{
     margin-bottom:150px;
 }
-/* .section2 h2:not(.section2 h2.quiSuisJe_title){
-    margin-top:10vh;
-} */
+
 .section2 h3:not(.name){
     margin-top:10vh;
 }
+
 .name > span{
     font-size:25px;
 }
@@ -160,6 +171,7 @@ h2{
 .section2 p{
     color:#ffffff90;
 }
+
 .smallLeftFixedGalaxy{
     position:fixed;
     top:0;
@@ -169,12 +181,13 @@ h2{
     /* transform:rotate(180deg); */
     opacity:0;
 }
+
 .smallLeftGalaxyMarker{
     position:absolute;
     top:-12.5vw;
     left:0;
-
 }
+
 .bigRightGalaxyMarker{
     position:absolute;
     right:0;
@@ -182,6 +195,7 @@ h2{
     width:1px;
     bottom:0;
 }
+
 .bigRightGalaxy{
     position:fixed;
     height:50vh;
@@ -192,12 +206,14 @@ h2{
     object-position:right;
     opacity:0;
 }
+
 .blue{
     position:absolute;
     right:0;
     bottom:0;
     opacity:1;
 }
+
 .decoLine{
     height:0px;
     position:absolute;
@@ -212,6 +228,7 @@ h2{
     vertical-align: middle;
     margin-right:10px;
 }
+
 .serviceLogo_container img{
     width:40px;
     height:40px;
@@ -223,14 +240,17 @@ h2{
 .servicesDetails_container{
     color:#ffffff90;
 }
+
 .servicesDetails_container h4{
     color:#ffffff !important;
     font-weight:400;
 }
+
 .service_title{
     margin-top:5vh;
     font-size:24px;
 }
+
 .servicesContent_container{
     padding-left:50px;
     position:relative;
@@ -239,25 +259,26 @@ h2{
 .section3{
     margin-bottom:140px;
 }
+
 .decoLine{
     height:calc(var(--line-height,0) * 1px) !important;
     display:block;
-    /* background:linear-gradient(var(--grad-percent,"transparent 0%, #b22045 100%")); */
     background:linear-gradient(transparent -20%, #b22045 70%,transparent 100%);
-    /* background:red; */
     position:absolute;
     left:17.5px;
 }
+
 .knowMore_link{
     color:#b22045;
     font-weight:bold;
     text-decoration:none;
-
 }
+
 .mini_title{
     margin-top:50px;
     font-weight:bold;
 }
+
 .miniImg{
     width:30px;
     height:30px;
@@ -265,14 +286,17 @@ h2{
     margin-right:10px;
     vertical-align: middle;
 }
+
 .whyMe_section p{
     line-height:1.7em;
 }
+
 .nb_container{
     margin-top:10px;
     color:#b22045;
     font-weight:bold;
 }
+
 .lexiqueContainer{
     background:#00000090;
     padding:3% 5%;
@@ -285,56 +309,72 @@ h2{
     background-size:auto 70%;
     background-repeat:no-repeat;
 }
+
 /*Responsive*/
 @media screen and (max-width:768px){
     section{
         max-width:100%;
     }
+
     .section1{
         display:flex;
         flex-direction:column-reverse;
         height:unset;
         max-width:100%;
+        overflow:hidden;
+        min-height:unset !important;
     }
+
     .earth_container{
         height:100px;
     }
+
     .earth_img{
         height:200px;
         width:auto;
     }
+
     h1{
         font-size:30px;
     }
+
     h1 + div{
         font-size:17px;
     }
+
     .section1 .shortLogoPresentation img{
         width:40px;
         height:40px;
     }
+
     .bigRightGalaxy{
         z-index:0;
         height:20vh;
     }
+
+    .smallLeftGalaxyMarker{
+        top:2vh;
+    }
+
     .content_container{
         width:100%;
         padding:0 20px;
     }
-    .bigRightGalaxy.blue{
-        display:none;
-    }
+    
     .smallLeftGalaxy{
         top:2vh;
     }
+
     .section2 .logo_container{
         flex-wrap:wrap;
     }
+
     .section2 .logo_container img{
         height:50px;
         margin-bottom:20px;
         margin-right:4vw;
     }
+    
     .section3{
         padding:0 20px;
     }

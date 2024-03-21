@@ -11,8 +11,6 @@ import ImageTooltip from '@/src/components/ImageTooltip/ImageTooltip.js';
 import ContactModal from '@/src/components/contactModal/contactModal.js';
 import LexiqueTerm from '@/src/components/LexiqueTerm/LexiqueTerm.js';
 
-//Images
-
 //White logos
 import jsLogo from '@/public/js-logo.png'
 import reactLogo from '@/public/react-logo.png'
@@ -117,7 +115,9 @@ export default function Home() {
         if(!remainingHeight){
           setRemainingHeight(r)
         }
+
         let currScrollTop = 0;
+
         if(bigRightGalaxyMarker.current.getBoundingClientRect().top > 0){
           currScrollTop = window.innerHeight/2 - bigRightGalaxyMarker.current.getBoundingClientRect().top;
         }else{
@@ -125,7 +125,6 @@ export default function Home() {
         }
 
         if(currScrollTop < remain/7){
-
           smallLeftBlueGalaxy.current.style.opacity = 1;
           smallLeftPbgGalaxy.current.style.opacity = 0;
           smallLeftPinkGalaxy.current.style.opacity = 0;
@@ -191,6 +190,7 @@ export default function Home() {
           bigLeftPbgGalaxy.current.style.opacity = 0;
           bigLeftPinkGalaxy.current.style.opacity = 1;
         }
+
       }else{
         setRemainingHeight(null);
         bigLeftBlueGalaxy.current.style.cssText = "position:absolute";

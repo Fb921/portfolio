@@ -34,6 +34,12 @@ html *{
   100%{transform:rotate(359deg)}
 }
 
+@keyframes movingBgMobile{
+  0%{transform:rotate(0deg) scale(0)}
+  50%{transform:rotate(180deg) scale(1.2)}
+  100%{transform:rotate(359deg) scale(1.4)}
+}
+
 .staryBg{
   background-image:url("../public/starsBackground.png");
   background-size:700px 700px;
@@ -68,4 +74,8 @@ html *{
     font-size:25px;
   }
   
+  .staryBg{
+    animation-name:movingBgMobile;
+    animation-duration:1200s;
+  }
 }

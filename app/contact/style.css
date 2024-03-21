@@ -7,11 +7,13 @@ main section{
 main section .info_bloc{
     margin-bottom:30px;
 }
+
 main section .info_title{
     color:#fff;
     font-weight:bold;
     margin-bottom:10px;
 }
+
 main section .info_title + div{
     font-size:20px;
 }
@@ -30,15 +32,18 @@ main section form{
     background:#242424;
     border-radius:20px;
 }
+
 main section form > div{
     margin-bottom:30px;
 }
+
 main section form label{
     display:block;
     font-size:19px;
     margin-bottom:5px;
     color:#fff;
 }
+
 main section form input{
     height:35px;
     width:100%;
@@ -46,6 +51,7 @@ main section form input{
     border:0;
     padding:0 10px;
 }
+
 main section form textarea{
     height:105px;
     width:100%;
@@ -54,3 +60,28 @@ main section form textarea{
     padding:10px;
 }
 
+@media screen and (max-width:768px){
+    main section{
+        padding:20px;
+        padding-top:40px;
+    }
+    
+    main section .flex_container{
+        display:flex;
+        flex-direction:column-reverse;
+    }
+    
+    main section .flex_container > div:nth-child(2){
+        border-left:#b22045 1px solid;
+        margin-bottom:30px;
+    }
+    
+    main section .flex_container > div:nth-child(2) .info_bloc:nth-child(2){
+        margin-bottom:0px;
+    }
+
+    .form_title{
+        color:#fff;
+        font-size:25px;
+    }
+}

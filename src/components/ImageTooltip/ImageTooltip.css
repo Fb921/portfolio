@@ -4,10 +4,9 @@
     display: inline-block;
     z-index:1;
 }
+
 .tooltip{
-    /* position:absolute; */
     position:fixed ;
-    /* display:none; */
     display:var(--display,"none");
     background:white;
     color:black;
@@ -15,29 +14,29 @@
     border-radius:5px;
     z-index:10;
     max-width:500px;
-    /* width:150px; */
     font-size:14px;
     line-height:1.3em;
-    /* top:50px; */
     top:calc(var(--top,0) * 1px);
     left:calc(var(--left,0) * 1px);
     z-index:10;
 }
+
 .tooltip:hover{
     position:absolute;
     display:inline-block;
 }
+
 .tooltipTitle{
     display:block;
     font-weight:bold;
     margin:10px 0;
 }
 
-
 .imageTooltip img:nth-child(1){
     position:absolute;
     z-index:1
 }
+
 .imageTooltip img:nth-child(2){
     position:relative;
     transition:opacity 500ms;
@@ -45,6 +44,7 @@
     opacity:0;
     z-index:2
 }
+
 .imageTooltip img:nth-child(2):hover{
     opacity:1;
 }
@@ -58,6 +58,15 @@
     object-position:center; */
     margin-right:2vw;
 }
+
 .imageTooltip img:hover{
     cursor:pointer;
-} 
+}
+
+@media screen and (max-width:700px){
+    .tooltip{
+        top:calc(var(--top,0) * 1px);
+        left:5%;
+        width:90%;
+    }
+}

@@ -7,6 +7,7 @@ export default function Contact() {
                 <h1>Contact</h1>
                 <div className="flex_container">
                     <div>
+                        <h2 className="mobile form_title">Formulaire de contact</h2>
                         <form>
                             <div>
                                 <label>Nom</label>
