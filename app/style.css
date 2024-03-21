@@ -12,6 +12,7 @@ section{
     padding:0 20px;
     max-width:75vw;
     margin:auto;
+    overflow:hidden;
 }
 .section1 > div:nth-child(1){
     position:relative;
@@ -300,6 +301,7 @@ h2{
     }
     .earth_img{
         height:200px;
+        width:auto;
     }
     h1{
         font-size:30px;
@@ -324,6 +326,14 @@ h2{
     }
     .smallLeftGalaxy{
         top:2vh;
+    }
+    .section2 .logo_container{
+        flex-wrap:wrap;
+    }
+    .section2 .logo_container img{
+        height:50px;
+        margin-bottom:20px;
+        margin-right:4vw;
     }
     .section3{
         padding:0 20px;
